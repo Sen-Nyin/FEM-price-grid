@@ -13,7 +13,6 @@
     --color-yellow: hsl(71, 73%, 54%);
     --color-grey-light: hsl(204, 43%, 93%);
     --color-grey-blue: hsl(217, 22%, 80%);
-    --color-background-body: hsl(0, 0%, 95%);
 
     --color-white: hsl(0, 0%, 100%);
 
@@ -40,7 +39,7 @@ body {
     color: var(--color-white);
     @include a.center();
     height: 100vh;
-    background-color: var(--color-background-body);
+    background-color: var(--color-grey-light);
 
     position: relative;
 }
