@@ -1,0 +1,15 @@
+@use '../abstracts'as a;
+@use '../base'as b;
+
+footer {
+    position: absolute;
+    top: 5px;
+
+    & a {
+        color: var(--color-cyan);
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

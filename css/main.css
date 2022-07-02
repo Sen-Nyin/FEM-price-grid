@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button {
+  cursor: revert;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input,
+textarea {
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  appearance: revert;
+}
+
+::placeholder {
+  color: unset;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  line-break: after-white-space;
+  -webkit-user-select: auto;
+  user-select: auto;
+}
+
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+:root {
+  font-size: 62.5%;
+  --color-cyan: hsl(179, 62%, 43%);
+  --color-cyan-light: hsl(179, 62%, 60%);
+  --color-yellow: hsl(71, 73%, 54%);
+  --color-grey-light: hsl(204, 43%, 93%);
+  --color-grey-blue: hsl(217, 22%, 80%);
+  --color-white: hsl(0, 0%, 100%);
+  --font-default: "Karla", sans-serif;
+  --font-size-default: 1.5rem;
+  --font-size-header-main: clamp(2rem, 1.7688751926rem + 0.6163328197vw, 2.4rem);
+  --font-size-header-sub: 1.8rem;
+  --font-weight-bold: 700;
+  --font-weight-normal: 400;
+  --padding-cards: clamp(2.4rem, 1.4755007704rem + 2.4653312789vw, 4rem);
+}
+
+body {
+  font-family: var(--font-default);
+  font-size: var(--font-size-default);
+  color: var(--color-white);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: var(--color-grey-blue);
+  position: relative;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  display: block;
+  background-color: var(--color-yellow);
+  padding-block: 1.4rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.0973011);
+}
+
+.cards {
+  display: grid;
+  grid-template-areas: "card1" "card2" "card3";
+  border-radius: clamp(0.5rem, 0.3266563945rem + 0.4622496148vw, 0.8rem);
+  box-shadow: 0 1.5rem 3rem rgba(0, 81, 171, 0.148847);
+  overflow: hidden;
+  max-width: 31rem;
+}
+@media only screen and (min-width: 64em) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "card1 card1" "card2 card3";
+    max-width: 63.5rem;
+  }
+}
+.cards__card {
+  padding: var(--padding-cards);
+  width: 100%;
+}
+.cards__card-header-main {
+  color: var(--color-cyan);
+  font-size: var(--font-size-header-main);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: 2.4rem;
+}
+.cards__card-header-sub {
+  font-size: var(--font-size-header-sub);
+  font-weight: var(--font-weight-bold);
+  padding-bottom: 1.8rem;
+}
+.cards__card-text-guarantee {
+  font-size: clamp(1.5rem, 1.3266563945rem + 0.4622496148vw, 1.8rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-yellow);
+  padding-bottom: clamp(1.6rem, 1.8889060092rem - 0.7704160247vw, 1.1rem);
+}
+.cards__card-1 {
+  grid-area: card1;
+  background-color: var(--color-white);
+}
+.cards__card-1-text {
+  font-size: clamp(1.4rem, 1.2844375963rem + 0.3081664099vw, 1.6rem);
+  color: var(--color-grey-blue);
+  line-height: 2.6rem;
+}
+.cards__card-2 {
+  grid-area: card2;
+  background-color: var(--color-cyan);
+}
+.cards__card-3 {
+  grid-area: card3;
+  background-color: var(--color-cyan-light);
+}
+.cards__card-3-list {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.price {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 4px;
+}
+.price__price {
+  padding-right: 1.1rem;
+  font-size: 3.2rem;
+  font-weight: var(--font-weight-bold);
+}
+.price__frequency {
+  color: var(--color-grey-light);
+}
+.price__value {
+  padding-bottom: 2.6rem;
+}
+
+footer {
+  position: absolute;
+  top: 5px;
+}
+footer a {
+  color: var(--color-cyan);
+}
+footer a:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=main.css.map */

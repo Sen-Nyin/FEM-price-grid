@@ -1,0 +1,45 @@
+@use '../abstracts/' as a;
+
+:root {
+
+    // Default font size to 10px
+
+    font-size: 62.5%;
+
+    // COLORS
+
+    --color-cyan: hsl(179, 62%, 43%);
+    --color-cyan-light: hsl(179, 62%, 60%);
+    --color-yellow: hsl(71, 73%, 54%);
+    --color-grey-light: hsl(204, 43%, 93%);
+    --color-grey-blue: hsl(217, 22%, 80%);
+
+    --color-white: hsl(0, 0%, 100%);
+
+
+    // TYPOGRAPHY
+
+    --font-default: 'Karla', sans-serif;
+    --font-size-default: 1.5rem;
+    --font-size-header-main: #{a.insertClamp(2,2.4,xs,lg)};
+    --font-size-header-sub: 1.8rem;
+
+    --font-weight-bold: 700;
+    --font-weight-normal: 400;
+
+    // Padding & Margins
+
+    --padding-cards: #{a.insertClamp(2.4,4,xs,lg)};
+
+}
+
+body {
+    font-family: var(--font-default);
+    font-size: var(--font-size-default);
+    color: var(--color-white);
+    @include a.center();
+    height: 100vh;
+    background-color: var(--color-grey-blue);
+
+    position: relative;
+}

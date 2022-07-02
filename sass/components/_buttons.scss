@@ -1,0 +1,13 @@
+@use '../abstracts' as a;
+@use '../base' as b;
+
+.btn {
+    font-size: 1.6rem;
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    display: block;
+    background-color: var(--color-yellow);
+    padding-block: 1.4rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1rem 1rem rgba(0,0,0,0.0973011);
+}
